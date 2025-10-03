@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <Button>this is button</Button>
+    <div className="flex justify-center items-center min-h-screen home-wrapper">
+      home
     </div>
   );
 }
