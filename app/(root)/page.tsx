@@ -5,7 +5,6 @@ import {
   MARKET_OVERVIEW_WIDGET_CONFIG,
   TOP_STORIES_WIDGET_CONFIG,
 } from "@/lib/constants";
-import React from "react";
 
 const Home = () => {
   return (
