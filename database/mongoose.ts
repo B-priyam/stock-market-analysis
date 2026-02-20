@@ -18,7 +18,7 @@ if (!cached) {
 export const connectTODatabase = async () => {
   if (!MONGODB_URI) throw new Error("Mongodb uri must be set");
 
-  if (!cached.conn) return cached.conn;
+  if (cached.conn) return cached.conn;
 
   if (!cached.promise) {
     cached.promise = mongoose.connect(MONGODB_URI, { bufferCommands: false });
@@ -31,4 +31,6 @@ export const connectTODatabase = async () => {
   }
 
   console.log("connected to db hello", MONGODB_URI);
+
+  return cached.conn;
 };
